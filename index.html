@@ -75,6 +75,7 @@
         <br>
         <hr>
         <input type="button" value="Add" onclick="calculate()">
+        <input type="button" value="Multiply" onclick="multiply()">
         <div class="result" id="result"></div>
     </div>
 
@@ -88,6 +89,21 @@
             if (!isNaN(num1) && !isNaN(num2)) {
                 // Perform the addition and display the result
                 let result = num1 + num2;
+                document.getElementById('result').textContent = "Result: " + result;
+            } else {
+                document.getElementById('result').textContent = "Please enter valid numbers!";
+            }
+        }
+
+        function multiply() {
+            // Get the values of the input fields
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+
+            // Check if the values are valid numbers
+            if (!isNaN(num1) && !isNaN(num2)) {
+                // Perform the addition and display the result
+                let result = num1 * num2;
                 document.getElementById('result').textContent = "Result: " + result;
             } else {
                 document.getElementById('result').textContent = "Please enter valid numbers!";
